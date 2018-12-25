@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 /* react-router-server 의 renderToString 은 비동기로 작동하며,
    데이터 로딩도 관리해줍니다. */
 // import { renderToString } from 'react-router-server';
-import ReactDOMServer from 'react-dom/server'
+import { renderToString } from 'react-dom/server'
 import configureRoute from '../configureRoute';
 
 const render = async (req) => {
@@ -37,7 +37,7 @@ const render = async (req) => {
     
     const context = {};
 
-    const html = ReactDOMServer.renderToString(
+    const html = renderToString(
             <Provider store={store}>
                 <StaticRouter context={context} location={url}>
                     <App/>

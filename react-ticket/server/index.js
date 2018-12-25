@@ -10,7 +10,7 @@ const distPath = path.resolve(__dirname+'/../build');
 app.use('^/static', express.static(path.resolve(distPath, 'static')));
 
 router.use('*', async (req, res) => {
-    page = await ssr(req); 
+    const page = await ssr(req); 
     return res.send(page);
   }
 );

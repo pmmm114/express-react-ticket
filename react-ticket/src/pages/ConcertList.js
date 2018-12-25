@@ -5,7 +5,7 @@ import ConcertApp from '../components/container/concertlist/ConcertApp'
 
 const Main = ({location}) => (
     <PageTemplate>
-        <ConcertApp query={location.search}/>
+        <ConcertApp/>
     </PageTemplate>
 )
 

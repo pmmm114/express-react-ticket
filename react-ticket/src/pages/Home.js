@@ -1,16 +1,12 @@
-import React, {Component} from 'react'
+import React from 'react'
 import PageTemplate from '../components/base/PageTemplate';
 
 import Main from '../components/container/main/Main';
 
-class Home extends Component {
-    render() {
-        return (
-            <PageTemplate>
-                <Main />
-            </PageTemplate>
-        );
-    }
-}
+const Home = ({location}) => (
+    <PageTemplate>
+        <Main/>
+    </PageTemplate>
+)
 
 export default Home;

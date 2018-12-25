@@ -33,7 +33,6 @@ class ConcertApp extends Component {
 
     handleButtonMore = (e) => {
         const { TradeActions , ticket} = this.props;
-        const ticket = ticket.ticketId;
         const newOwner = ticket.Owner;
         const test={ticket,newOwner};
         TradeActions.buyTickets(test);
