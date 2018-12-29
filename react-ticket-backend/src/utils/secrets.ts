@@ -6,3 +6,4 @@ if (fs.existsSync(".env")) {
 }
 
 export const MONGODB_URI:string = String(process.env["MONGODB_URI"]);
+export const SERVER_PORT:number = Number(process.env["SERVER_PORT"]);
