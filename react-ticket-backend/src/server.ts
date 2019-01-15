@@ -16,7 +16,7 @@ export default class Server{
 
     initializeDb(): void {
         const mongoUrl:string = String(MONGODB_URI);
-        mongoose.connect(mongoUrl, { useNewUrlParser: true }).then(
+        mongoose.connect(mongoUrl, { useNewUrlParser: true, useCreateIndex: true, }).then(
           () => {
             console.log('DB Connection has been established');
           },
